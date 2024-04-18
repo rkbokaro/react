@@ -8,3 +8,6 @@ Proxy(Proxy.Type.HTTP, new InetSocketAddress("172.16.1.61", 8080)) ); this code 
 
 
 some times application run with https and some time http
+
+
+ .\mvnw clean install  
