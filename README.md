@@ -11,3 +11,7 @@ some times application run with https and some time http
 
 
  .\mvnw clean install  
+
+
+
+ logfile of netbeans------we can see the output of console in spring boot ---same is available in log file name "messages" of log of elastic netbeans. 
