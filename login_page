@@ -1,0 +1,11 @@
+  const handleButtonClick = () => {
+    // Replace the URL with the one you want to open
+    const url = 'https://www.example.com';
+    window.location.href = url;
+  };
+
+
+ const handleButtonClick = () => {
+    const url = 'https://www.example.com';
+    window.open(url, '_blank');
+  };
