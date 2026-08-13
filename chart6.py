@@ -1,39 +1,7 @@
-# =========================================================
-# STRING CHART CONFIG
-# ==============================
-# 1)Train started at first juncition
-#  if not started:
-                # if not station_meta[st].get("is_junction", False):
-                #     continue
-                # started = True
-#
-# 2) junction filter in this function(get_junction_stations_in_order)
-# ===========================
-#
-# --- MULTI-DAY UPGRADE ---------------------------------------------------
-# The original chart mapped time with `t % SECONDS_IN_DAY`, so any train
-# still running past 24h wrapped back to the left edge and got treated as
-# a brand-new segment. That's gone now. Instead, `StringChartView` owns a
-# horizontal time *window* (in seconds, can be many hours or many days)
-# and maps time -> x against that window instead of a fixed calendar day.
-#
-# Two ways to use it:
-#
-#   1) SELF-MOVING (no wiring needed) — just don't pass a `view` at all.
-#      draw_string_chart() creates a temporary follow-mode view each call,
-#      so the chart always shows the last `window_hours` of running and
-#      auto-scrolls forward as sim_time advances, indefinitely, no wrap.
-#
-#   2) SCROLLABLE — create one `StringChartView` up front, keep it around
-#      across frames, pass it into draw_string_chart(), and route pygame
-#      events through view.handle_event(event, chart_rect) from your main
-#      event loop. Mouse wheel / click-drag pan the chart; a "LIVE" button
-#      jumps back to auto-follow. See the bottom of this file for a wiring
-#      example.
-# ---------------------------------------------------------------------------
 
+# hello
 import pygame
-# from irsimpy13 import sec_to_hhmmss
+
 
 LEFT_MARGIN   = 90
 RIGHT_MARGIN  = 30
@@ -46,9 +14,7 @@ STRING_CHART_Y = TOP_MARGIN
 
 SECONDS_IN_DAY = 24 * 3600
 
-# =========================================================
-# COLORS
-# =========================================================
+
 
 BG_COLOR     = (255, 255, 255)
 BORDER_COLOR = (0, 0, 0)
